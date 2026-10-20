@@ -22,7 +22,7 @@
       var t = new URLSearchParams(location.search).get('theme');
       if (t !== 'day' && t !== 'night') t = null;
       try { t = t || localStorage.getItem('bf-theme'); } catch (e) {}
-      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+      if (t !== 'night') t = 'day';   // always open in Day unless the visitor chose Night
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
