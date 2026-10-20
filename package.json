@@ -1,0 +1,10 @@
+{
+  "name": "bellefort-estates",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bellefort Estates website (static HTML/CSS/JS)",
+  "scripts": {
+    "dev": "npx --yes live-server --port=3000",
+    "start": "npx --yes live-server --port=3000"
+  }
+}

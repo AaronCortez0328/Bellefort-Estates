@@ -1,0 +1,179 @@
+/* =========================================================
+   Bellefort Estates: interactions
+   ========================================================= */
+(function () {
+  'use strict';
+
+  /* ---------- Resident Portal link ----------
+     Paste the portal address here when it's ready, e.g.
+     var PORTAL_URL = 'https://portal.bellefortestates.com';
+     Every button marked data-portal will open it. */
+  var PORTAL_URL = 'https://behoademo.hoa-system.com/portal';
+
+  var root = document.documentElement;
+  var header = document.querySelector('.header');
+
+  if (PORTAL_URL) {
+    document.querySelectorAll('[data-portal]').forEach(function (a) {
+      a.href = PORTAL_URL;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  }
+
+  /* ---------- Day / Night ---------- */
+  document.querySelectorAll('.theme-toggle, .theme-mini').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'night' ? 'day' : 'night';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('bf-theme', next); } catch (e) {}
+    });
+  });
+
+  /* ---------- Header state ----------
+     Transparent at the very top; solid as soon as the page scrolls. */
+  function onScroll() {
+    header.classList.toggle('is-scrolled', window.scrollY > 40);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  /* ---------- In-page links ----------
+     Handled here so every link lands the same way: #top (logo, "Back to top")
+     goes to the very top, and sections stop just below the fixed header. */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a || a.hasAttribute('data-portal') && PORTAL_URL) return;
+    var id = a.getAttribute('href');
+    var y;
+    if (id === '#top' || id === '#') {
+      y = 0;
+    } else {
+      var target = document.querySelector(id);
+      if (!target) return;
+      y = target.getBoundingClientRect().top + window.scrollY - (header.offsetHeight - 4);
+    }
+    e.preventDefault();
+    window.scrollTo({ top: Math.max(0, y), behavior: reduceMotion ? 'auto' : 'smooth' });
+    if (history.replaceState) history.replaceState(null, '', id === '#top' ? location.pathname + location.search : id);
+  });
+
+  /* ---------- Mobile menu ---------- */
+  var menuBtn = document.querySelector('.menu-btn');
+  function setMenu(open) {
+    document.body.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+  }
+  menuBtn.addEventListener('click', function () { setMenu(!document.body.classList.contains('menu-open')); });
+  document.querySelectorAll('.mobile-menu a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  /* ---------- Active nav link ---------- */
+  var links = document.querySelectorAll('.nav a');
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      links.forEach(function (l) { l.classList.toggle('is-active', l.getAttribute('href') === '#' + entry.target.id); });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ['about', 'amenities', 'hotlines', 'history', 'privacy', 'contact'].forEach(function (id) { spy.observe(document.getElementById(id)); });
+
+  /* ---------- Inquiry form ----------
+     TODO: replace with the GoHighLevel form embed or post to its webhook.
+     Until then this only validates and shows the confirmation. */
+  var form = document.getElementById('inquiry-form');
+  var status = form.querySelector('.form__status');
+  var done = document.querySelector('.form-done');
+  var counter = form.querySelector('.counter');
+  var message = form.elements.message;
+
+  function wrapOf(el) { return el.closest('.field') || el.closest('.consent') || el.closest('.chips'); }
+
+  message.addEventListener('input', function () {
+    counter.textContent = message.value.length + ' / 500';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var firstBad = null;
+    form.querySelectorAll('[required]').forEach(function (f) {
+      // radio groups are valid when any option is picked
+      var ok = f.type === 'radio' ? !!form.querySelector('input[name="' + f.name + '"]:checked') : f.checkValidity();
+      wrapOf(f).classList.toggle('is-invalid', !ok);
+      if (!ok && !firstBad) firstBad = f;
+    });
+    if (firstBad) {
+      firstBad.focus();
+      status.textContent = 'Please complete the highlighted fields.';
+      return;
+    }
+    status.textContent = '';
+    var first = form.elements.name.value.trim().split(' ')[0];
+    done.querySelector('.form-done__name').textContent = first ? ', ' + first : '';
+    form.hidden = true;
+    done.hidden = false;
+    form.reset();
+    counter.textContent = '0 / 500';
+  });
+
+  form.addEventListener('input', function (e) {
+    var w = wrapOf(e.target);
+    if (w) w.classList.remove('is-invalid');
+    if (!form.querySelector('.is-invalid')) status.textContent = '';
+  });
+
+  done.querySelector('.form-done__again').addEventListener('click', function () {
+    done.hidden = true;
+    form.hidden = false;
+    form.elements.name.focus();
+  });
+
+  /* ---------- Amenity lightbox ---------- */
+  var box = document.querySelector('.lightbox');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.amenity__media'));
+  var boxImg = box.querySelector('.lightbox__img');
+  var boxName = box.querySelector('.lightbox__caption strong');
+  var boxText = box.querySelector('.lightbox__caption span');
+  var current = 0;
+
+  function show(i) {
+    current = (i + shots.length) % shots.length;
+    var item = shots[current].closest('.amenity');
+    boxImg.classList.remove('is-loaded');
+    boxImg.onload = function () { boxImg.classList.add('is-loaded'); };
+    boxImg.src = shots[current].dataset.full;
+    boxImg.alt = shots[current].querySelector('img').alt;
+    boxName.textContent = item.querySelector('.amenity__name').textContent;
+    boxText.textContent = item.querySelector('.amenity__text').textContent;
+  }
+  shots.forEach(function (btn, i) {
+    btn.addEventListener('click', function () {
+      show(i);
+      if (box.showModal) box.showModal(); else box.setAttribute('open', '');
+      document.documentElement.classList.add('lightbox-open');
+    });
+  });
+  function closeBox() { box.close ? box.close() : box.removeAttribute('open'); }
+  box.addEventListener('close', function () { document.documentElement.classList.remove('lightbox-open'); });
+  box.querySelector('.lightbox__close').addEventListener('click', closeBox);
+  box.querySelector('.lightbox__nav--prev').addEventListener('click', function () { show(current - 1); });
+  box.querySelector('.lightbox__nav--next').addEventListener('click', function () { show(current + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) closeBox(); });   // click backdrop
+  box.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+  // swipe on phones
+  var x0 = null;
+  box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+    x0 = null;
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();

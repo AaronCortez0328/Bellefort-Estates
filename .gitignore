@@ -1,0 +1,15 @@
+# Large working files (originals and 4x upscales); the site uses the .webp versions
+assets/images/amenities/source/
+assets/images/amenities/pool.jpg
+
+# Unused images kept locally as backups
+assets/images/hero/vivienne-hero-*.jpg
+assets/images/logo/*-full.png
+
+# Internal research notes (contains unverified items)
+RESEARCH.md
+
+# Tooling
+node_modules/
+.DS_Store
+Thumbs.db

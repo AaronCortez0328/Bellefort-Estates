@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#701a1a">
+  <title>Privacy Policy | Bellefort Estates</title>
+  <meta name="description" content="How the Bellefort Estates Homeowners Association collects, uses and protects personal data under the Data Privacy Act of 2012.">
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem('bf-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="header is-scrolled">
+    <div class="wrap header__inner header__inner--simple">
+      <a href="index.html" class="header__logo" aria-label="Bellefort Estates home">
+        <img src="assets/images/logo/bellefort-logo.png" alt="Bellefort Estates" class="logo logo--dark">
+        <img src="assets/images/logo/bellefort-logo-white.png" alt="" aria-hidden="true" class="logo logo--light">
+      </a>
+      <div class="header__right">
+        <a href="index.html" class="link-arrow link-arrow--back">Back to home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- TODO: have the association (and its Data Protection Officer) review and
+       approve this policy before publishing; fill in the DPO contact details
+       and NPC registration below. -->
+  <main class="policy">
+    <section class="section">
+      <div class="wrap grid">
+        <p class="label">Privacy Policy</p>
+        <div class="grid__main">
+          <h1 class="h2">Your privacy matters.</h1>
+          <p class="lead policy__intro">Bellefort Estates Homeowners Association respects your privacy and recognizes the need for appropriate measures to protect and manage the personal data entrusted to us.</p>
+          <p class="body">This policy explains how the Association collects, uses, shares and protects personal data. It follows the Data Privacy Act of 2012 (Republic Act No. 10173), its Implementing Rules and Regulations, and issuances of the National Privacy Commission. It applies to residents, visitors, employees and suppliers of the Association.</p>
+
+          <div class="policy__body">
+            <h2>1. Residents and visitors</h2>
+            <p><strong>What we collect.</strong> Your name, address in the estate (phase, block and lot), contact details, vehicle details for gate stickers, IDs presented at the gate, photos and CCTV footage, records of association dues and payments, and the concerns and requests you send us.</p>
+            <p><strong>How we collect it.</strong> Through membership and request forms, the resident portal, the contact form on this website, and the entrance gates.</p>
+            <p><strong>Why we use it.</strong> To manage membership and resident accounts, process dues and payments, issue gate stickers and passes, keep the estate secure, respond to concerns, and share community announcements.</p>
+
+            <h2>2. Employees and applicants</h2>
+            <p>We collect résumés, references, government ID numbers, employment and performance records and photos to assess applicants, manage employment and meet legal requirements.</p>
+
+            <h2>3. Suppliers</h2>
+            <p>For suppliers who are sole proprietors, we collect business registration, tax and accreditation documents to evaluate and maintain supplier records.</p>
+
+            <h2>4. Sharing your information</h2>
+            <p>We share personal data only with Association staff, contractors and consultants who need it to run the estate, and only as the law allows: to comply with legal obligations, to protect the rights of the Association, in emergencies, or with your consent. We do not sell personal data.</p>
+
+            <h2>5. Children</h2>
+            <p>We do not knowingly collect personal data from minors without the consent of a parent or guardian.</p>
+
+            <h2>6. Retention and security</h2>
+            <p>We keep personal data only for as long as it is needed for the purposes above or as required by law. We use reasonable organizational, physical and technical measures to protect it against loss, misuse and unauthorized access.</p>
+
+            <h2>7. Your rights as a data subject</h2>
+            <p>Under the Data Privacy Act, you have the right to:</p>
+            <ul class="list policy__rights">
+              <li>be informed about how your personal data is processed</li>
+              <li>access your personal data</li>
+              <li>object to processing, and withdraw your consent</li>
+              <li>have inaccurate data corrected</li>
+              <li>have your data erased or blocked</li>
+              <li>data portability</li>
+              <li>be compensated for damages from inaccurate or unlawfully used data</li>
+              <li>file a complaint with the National Privacy Commission</li>
+            </ul>
+
+            <h2>8. Contact our Data Protection Officer</h2>
+            <p>Send questions, requests and complaints about your personal data to the Association's Data Protection Officer. You may also file a complaint with the National Privacy Commission at <a href="https://privacy.gov.ph" target="_blank" rel="noopener">privacy.gov.ph</a>.</p>
+            <!-- TODO: DPO name/office, address, phone, email (e.g. privacy@...), and NPC registration -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Bellefort Estates</span>
+        <a href="index.html">Back to home</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
