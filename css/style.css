@@ -1090,3 +1090,9 @@ ol, ul { list-style: none; padding: 0; }
 }
 [data-theme="night"] .footer__word { background-image: linear-gradient(180deg, rgba(227, 170, 164, 0.18), rgba(227, 170, 164, 0) 80%); }
 .footer__cta .pill { gap: 8px; }
+
+/* Phones use a dedicated high-res crop of the gate (see <picture> in the hero),
+   centered on the guardhouse, so the photo stays sharp on 3x screens */
+@media (max-width: 720px) {
+  .hero__img { object-position: 50% 100%; }
+}

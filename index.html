@@ -77,8 +77,14 @@
          clouds rise and swallow them, and the page clears into About. -->
     <section class="hero" aria-label="Welcome">
       <div class="hero__media" aria-hidden="true">
-        <img src="assets/images/hero/gate-day.jpg" srcset="assets/images/hero/gate-day-960.webp 960w, assets/images/hero/gate-day-1600.webp 1600w, assets/images/hero/gate-day.webp 2560w" sizes="(max-width: 720px) 112vh, (max-aspect-ratio: 16/9) 179vh, 100vw" alt="" class="hero__img hero__img--day" fetchpriority="high" width="2560" height="1430">
-        <img src="assets/images/hero/gate-night.jpg" srcset="assets/images/hero/gate-night-960.webp 960w, assets/images/hero/gate-night-1600.webp 1600w, assets/images/hero/gate-night.webp 2560w" sizes="(max-width: 720px) 112vh, (max-aspect-ratio: 16/9) 179vh, 100vw" alt="" class="hero__img hero__img--night" width="2560" height="1430" decoding="async">
+        <picture>
+          <source media="(max-width: 720px)" srcset="assets/images/hero/gate-day-mobile-1600.webp 1600w, assets/images/hero/gate-day-mobile-full.webp 3195w" sizes="(max-width: 720px) 87vh">
+          <img src="assets/images/hero/gate-day.jpg" srcset="assets/images/hero/gate-day-960.webp 960w, assets/images/hero/gate-day-1600.webp 1600w, assets/images/hero/gate-day.webp 2560w" sizes="(max-width: 720px) 112vh, (max-aspect-ratio: 16/9) 179vh, 100vw" alt="" class="hero__img hero__img--day" fetchpriority="high" width="2560" height="1430">
+        </picture>
+        <picture>
+          <source media="(max-width: 720px)" srcset="assets/images/hero/gate-night-mobile-1600.webp 1600w, assets/images/hero/gate-night-mobile-full.webp 3195w" sizes="(max-width: 720px) 87vh">
+          <img src="assets/images/hero/gate-night.jpg" srcset="assets/images/hero/gate-night-960.webp 960w, assets/images/hero/gate-night-1600.webp 1600w, assets/images/hero/gate-night.webp 2560w" sizes="(max-width: 720px) 112vh, (max-aspect-ratio: 16/9) 179vh, 100vw" alt="" class="hero__img hero__img--night" width="2560" height="1430" decoding="async">
+        </picture>
       </div>
 
       <div class="wrap hero__content">
