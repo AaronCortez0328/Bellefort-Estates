@@ -33,7 +33,8 @@
   /* ---------- Header state ----------
      Transparent at the very top; solid as soon as the page scrolls. */
   function onScroll() {
-    header.classList.toggle('is-scrolled', window.scrollY > 40);
+    // pages without the hero photo keep the solid header at all times
+    header.classList.toggle('is-scrolled', !document.querySelector('.hero') || window.scrollY > 40);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
@@ -78,60 +79,14 @@
       links.forEach(function (l) { l.classList.toggle('is-active', l.getAttribute('href') === '#' + entry.target.id); });
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
-  ['about', 'amenities', 'hotlines', 'history', 'privacy', 'contact'].forEach(function (id) { spy.observe(document.getElementById(id)); });
-
-  /* ---------- Inquiry form ----------
-     TODO: replace with the GoHighLevel form embed or post to its webhook.
-     Until then this only validates and shows the confirmation. */
-  var form = document.getElementById('inquiry-form');
-  var status = form.querySelector('.form__status');
-  var done = document.querySelector('.form-done');
-  var counter = form.querySelector('.counter');
-  var message = form.elements.message;
-
-  function wrapOf(el) { return el.closest('.field') || el.closest('.consent') || el.closest('.chips'); }
-
-  message.addEventListener('input', function () {
-    counter.textContent = message.value.length + ' / 500';
-  });
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var firstBad = null;
-    form.querySelectorAll('[required]').forEach(function (f) {
-      // radio groups are valid when any option is picked
-      var ok = f.type === 'radio' ? !!form.querySelector('input[name="' + f.name + '"]:checked') : f.checkValidity();
-      wrapOf(f).classList.toggle('is-invalid', !ok);
-      if (!ok && !firstBad) firstBad = f;
-    });
-    if (firstBad) {
-      firstBad.focus();
-      status.textContent = 'Please complete the highlighted fields.';
-      return;
-    }
-    status.textContent = '';
-    var first = form.elements.name.value.trim().split(' ')[0];
-    done.querySelector('.form-done__name').textContent = first ? ', ' + first : '';
-    form.hidden = true;
-    done.hidden = false;
-    form.reset();
-    counter.textContent = '0 / 500';
-  });
-
-  form.addEventListener('input', function (e) {
-    var w = wrapOf(e.target);
-    if (w) w.classList.remove('is-invalid');
-    if (!form.querySelector('.is-invalid')) status.textContent = '';
-  });
-
-  done.querySelector('.form-done__again').addEventListener('click', function () {
-    done.hidden = true;
-    form.hidden = false;
-    form.elements.name.focus();
+  ['about', 'amenities', 'hotlines', 'history', 'privacy', 'portal-plan'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) spy.observe(el);
   });
 
   /* ---------- Amenity lightbox ---------- */
   var box = document.querySelector('.lightbox');
+  if (box) {
   var shots = Array.prototype.slice.call(document.querySelectorAll('.amenity__media'));
   var boxImg = box.querySelector('.lightbox__img');
   var boxName = box.querySelector('.lightbox__caption strong');
@@ -173,6 +128,28 @@
     var dx = e.changedTouches[0].clientX - x0;
     if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
     x0 = null;
+  });
+  }
+
+  /* ---------- Portal plan tabs ---------- */
+  var planTabs = Array.prototype.slice.call(document.querySelectorAll('.plan-tabs [role="tab"]'));
+  function selectTab(tab, focus) {
+    planTabs.forEach(function (t) {
+      var on = t === tab;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+    tab.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }
+  planTabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { selectTab(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var n = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (n) { e.preventDefault(); selectTab(planTabs[(i + n + planTabs.length) % planTabs.length], true); }
+    });
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
