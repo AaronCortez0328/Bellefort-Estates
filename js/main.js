@@ -175,5 +175,26 @@
     x0 = null;
   });
 
+  /* ---------- Portal plan tabs ---------- */
+  var planTabs = Array.prototype.slice.call(document.querySelectorAll('.plan-tabs [role="tab"]'));
+  function selectTab(tab, focus) {
+    planTabs.forEach(function (t) {
+      var on = t === tab;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+    tab.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }
+  planTabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { selectTab(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var n = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (n) { e.preventDefault(); selectTab(planTabs[(i + n + planTabs.length) % planTabs.length], true); }
+    });
+  });
+
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
