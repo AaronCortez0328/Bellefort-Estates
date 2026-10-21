@@ -1312,3 +1312,25 @@ th.range-cell small { text-transform: none; letter-spacing: 0; opacity: 0.7; }
   .pk__item { min-height: 0; }
   .fund { grid-template-columns: 1fr; }
 }
+
+/* Outsourcing comparison: highlight our row */
+.ptable--compare tr.is-ours th, .ptable--compare tr.is-ours td { background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--ink); }
+.ptable--compare tr.is-ours td strong { font-size: 1.25rem; font-weight: 500; color: var(--brand-text); }
+.ptable--compare tr.is-ours th { font-weight: 500; }
+.plan-card--ours { border-color: color-mix(in srgb, var(--brand-text) 45%, transparent); }
+.plan-card ul { display: grid; gap: 6px; padding-left: 0; }
+.plan-card li { position: relative; padding-left: 16px; }
+.plan-card li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 6px; height: 6px; border-radius: 50%; background: var(--brand-text); }
+
+.ptable td small, .ptable th small { display: block; margin-top: 2px; font-size: 0.78rem; font-weight: 400; color: var(--muted); }
+.ptable--compare table { min-width: 820px; }
+/* Comparison table fits the panel on desktop; scrolls only on small screens */
+@media (min-width: 1025px) {
+  .ptable--compare table { min-width: 0; table-layout: fixed; }
+  .ptable--compare th:nth-child(1) { width: 24%; }
+  .ptable--compare th:nth-child(2) { width: 25%; }
+  .ptable--compare th:nth-child(3) { width: 17%; }
+  .ptable--compare th:nth-child(4) { width: 20%; }
+  .ptable--compare th:nth-child(5) { width: 14%; }
+  .ptable--compare th, .ptable--compare td { padding: 12px 12px; }
+}
