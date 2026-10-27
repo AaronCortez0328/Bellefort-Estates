@@ -15,6 +15,16 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/executive-summary.css">
+  <noscript><style>
+    .header { position: relative; color: var(--ink); background: var(--bg); }
+    .header__inner { display: flex; flex-wrap: wrap; height: auto; padding-block: 16px; }
+    .header__logo { flex: 0 0 88px; }
+    .header__right { margin-left: auto; }
+    .header .nav { display: flex; flex-wrap: wrap; order: 3; width: 100%; justify-content: flex-start; gap: 4px 20px; }
+    .header .nav a { display: inline-flex; align-items: center; min-height: 44px; }
+    .header .menu-btn, .header .theme-mini, .header .mobile-menu { display: none; }
+  </style></noscript>
 
   <!-- Set the theme before first paint. ?theme=day|night overrides. -->
   <script>
@@ -42,8 +52,9 @@
         <a href="#amenities">Amenities</a>
         <a href="#hotlines">Hotlines</a>
         <a href="#history">History</a>
-        <a href="#privacy">Privacy</a>
+        <a href="#executive-summary">Executive Summary</a>
         <a href="#portal-plan">Portal Plan</a>
+        <a href="#privacy">Privacy</a>
       </nav>
 
       <div class="header__right">
@@ -65,8 +76,9 @@
       <a href="#nearby">Nearby</a>
       <a href="#hotlines">Hotlines</a>
       <a href="#history">History</a>
-      <a href="#privacy">Privacy</a>
+      <a href="#executive-summary">Executive Summary</a>
       <a href="#portal-plan">Portal Plan</a>
+      <a href="#privacy">Privacy</a>
       <a href="#portal" data-portal>Resident Portal</a>
     </div>
   </header>
@@ -404,77 +416,835 @@
       </div>
     </section>
 
-    <!-- ============ PRIVACY ============ -->
-    <section class="section section--tint" id="privacy">
-      <div class="wrap">
-        <div class="grid">
-          <p class="label reveal">Data Privacy</p>
-          <div class="grid__main">
-            <h2 class="h2 reveal">Your privacy matters.</h2>
-            <p class="body reveal">Bellefort Estates Homeowners Association respects your privacy and recognizes the need for appropriate measures to protect and manage the personal data entrusted to us, in line with the Data Privacy Act of 2012 (Republic Act No. 10173).</p>
-          </div>
-        </div>
+<!-- Executive Summary: new content only; existing sections remain intact. -->
+<section class="section executive-summary" id="executive-summary" aria-labelledby="executive-summary-title">
+<div class="wrap exec-shell">
+<div class="exec-topline" data-exec-reveal><p class="label">Executive Summary</p><p class="exec-status">Proposed portal &middot; For HOA review</p></div>
+<div class="exec-hero">
+<div class="exec-hero-copy" data-exec-reveal>
+<h2 class="exec-title" id="executive-summary-title" data-source-block="0">Bellefort HOA Portal <span>Executive Summary</span></h2>
+<p data-source-block="5" class="body exec-intro">Bellefort needs one dependable place to find official updates, follow community requests and discover opportunities within the village. The proposed HOA portal brings these activities into a structured website, with access based on each person’s verified role.</p>
+<div class="exec-actions"><a class="pill pill--accent" href="#portal-plan">View portal plan</a><a class="link-arrow" href="#privacy">Privacy &amp; security</a></div>
+</div>
+<div class="exec-outcome" role="note" aria-label="Proposed outcome" data-exec-reveal data-exec-step="1">
+<svg class="exec-outcome-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M9 25h11v15H5V24C5 13 10 7 19 5v7c-6 2-10 6-10 13ZM32 25h11v15H28V24c0-11 5-17 14-19v7c-6 2-10 6-10 13Z" stroke="currentColor" stroke-width="1.2"/></svg>
+<p class="exec-outcome-label">Proposed outcome</p>
+<div data-source-block="11" class="exec-outcome-copy"><h3>What success should look like.</h3><p> A homeowner can find the latest approved notice, submit a concern once, follow its progress and check an authorised record without relying on a personal connection.</p></div>
+</div>
+</div>
+<div class="exec-benefits" role="group" aria-labelledby="exec-benefits-title">
+<div class="exec-section-heading" data-exec-reveal><p class="exec-eyebrow">The community</p><h3 id="exec-benefits-title" data-source-block="13">How the community benefits</h3></div>
+<div class="exec-benefit-grid"><article class="exec-benefit" data-exec-reveal data-exec-step="0">
+<span class="exec-benefit-number" aria-hidden="true">01</span>
+<div data-source-block="14"><h4>For Homeowners and OFW owners</h4><p>Read approved updates when convenient, follow your own requests, and see community project progress. Where later approved, access your own statements and receipts without asking someone to forward private records. An owner’s absence from the village should not mean an absence of information.</p></div>
+</article>
+<article class="exec-benefit" data-exec-reveal data-exec-step="1">
+<span class="exec-benefit-number" aria-hidden="true">02</span>
+<div data-source-block="15"><h4>For Residents and Renters</h4><p>Receive notices relevant to the residence, report common-area problems and use services permitted by the tenancy and HOA rules. A renter’s account is verified and linked to an authorised residence; it does not automatically carry a member’s governance rights.</p></div>
+</article>
+<article class="exec-benefit" data-exec-reveal data-exec-step="2">
+<span class="exec-benefit-number" aria-hidden="true">03</span>
+<div data-source-block="16"><h4>For Committees and the Board</h4><p>Maintain a clear queue of work, record decisions and identify unresolved issues. Approved summary reports help the Board review service performance without routinely browsing everyone’s private household information.</p></div>
+</article>
+</div>
+</div>
+<div class="exec-livelihood" id="summary-livelihood" role="group" aria-labelledby="exec-livelihood-title">
+<div class="exec-section-heading" data-exec-reveal><p class="exec-eyebrow">The proposed first phase</p><h3 id="exec-livelihood-title" data-source-block="17">Start with the Livelihood program</h3><p data-source-block="18">A practical first phase is a community hub for verified, willing homeowners. It can help residents find local products, services and work opportunities while giving participating owners a clearer way to promote what they offer.</p></div>
+<div data-source-block="19"><div class="exec-sr-only">Category What homeowners can do</div><ul class="exec-programs" aria-label="Proposed Livelihood categories">
+<li class="exec-program" data-exec-reveal data-exec-step="0">
+<svg class="exec-program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h18M4 10V6l2-3h12l2 3v4M5 10v11h14V10M9 21v-7h6v7M3 6h18"/></svg>
+<div><h4>Business Directory</h4><p>Find participating businesses, products and professional services by category.</p></div>
+</li>
+<li class="exec-program" data-exec-reveal data-exec-step="1">
+<svg class="exec-program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+<div><h4>Marketplace Buy and Sell</h4><p>Post permitted items for sale and contact the listing owner directly.</p></div>
+</li>
+<li class="exec-program" data-exec-reveal data-exec-step="0">
+<svg class="exec-program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M8 21V11h8v10M8 15h8M8 18h8"/></svg>
+<div><h4>Garage Sales</h4><p>Publish approved sale dates and listings so neighbours can plan ahead.</p></div>
+</li>
+<li class="exec-program" data-exec-reveal data-exec-step="1">
+<svg class="exec-program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 11h18M7 15h3M14 15h3"/></svg>
+<div><h4>Booth Events</h4><p>Express interest in seasonal community events under published allocation rules.</p></div>
+</li>
+<li class="exec-program" data-exec-reveal data-exec-step="0">
+<svg class="exec-program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M3 12a21 21 0 0 0 18 0M10 13v3h4v-3"/></svg>
+<div><h4>Job Openings and Referrals</h4><p>Share legitimate vacancies, skills and referral opportunities without publishing applicants’ CVs.</p></div>
+</li>
+<li class="exec-program" data-exec-reveal data-exec-step="1">
+<svg class="exec-program-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16M12 5C9 3 6 3 3 4v15c3-1 6-1 9 2 3-3 6-3 9-2V4c-3-1-6-1-9 1Z"/></svg>
+<div><h4>Seminars and Workshop Training</h4><p>Learn practical skills for managing your property and lowering living costs.</p></div>
+</li>
+</ul></div>
+<div class="exec-participation-note" data-exec-reveal><p data-source-block="22"><strong>Free participation with clear choices.</strong> Registration in this initial Livelihood program is proposed to be free. Homeowners choose the business information and contact links they want displayed to the approved audience. Listings may link to a business website, Facebook page, Messenger, Viber or WhatsApp.</p></div>
+<details class="exec-detail" id="exec-participation">
+<summary>How participation works</summary>
+<div class="exec-copy">
+<p data-source-block="23">The Livelihood Committee will verify eligibility, review listings against published rules, record approval or rejection reasons, and handle corrections and reports. IT volunteers maintain the technology under approved access controls. Listings do not guarantee sales, employment or HOA endorsement.</p>
+<p data-source-block="24">Simple participation process. Express interest, review the privacy notice, verify eligibility, choose display fields, submit a listing, receive committee review, then publish. Owners can update or request removal of their listing; the committee keeps a proportionate audit trail.</p>
+<h3>Seminars and Workshop Training</h3>
+<p data-source-detail="19">Empower homeowners by providing the knowledge and practical skills needed to effectively manage their properties, lower living costs, build a safer, more cohesive neighborhood and opportunities for livelihood.</p>
+</div>
+</details>
+</div>
+<div class="exec-reading" id="exec-proposal-details">
+<div class="exec-reading-heading" data-exec-reveal><p class="exec-eyebrow">For a closer look</p><h3>Explore the proposal.</h3></div>
+<details class="exec-detail" id="summary-overview">
+<summary>Why the portal</summary>
+<div class="exec-copy">
+<h3 data-source-block="4">Why Bellefort needs the portal</h3>
+<p data-source-block="6">Our current setup relies on many group chats, Facebook posts, separate forms and manual follow-ups. Important notices can get buried, records can become inconsistent, and residents may need to repeat the same concern to several people. Owners working overseas or living elsewhere can find it particularly difficult to stay informed.</p>
+<p data-source-block="7">The goal is to make community information easier to find and services easier to follow. Group chats can continue to notify and discuss; the portal should hold the approved notice, current record and request history.</p>
+<div class="exec-table" role="region" tabindex="0" aria-labelledby="exec-table-8" data-source-block="8">
+<table>
+<caption id="exec-table-8">Current difficulties and proposed improvements</caption>
+<thead>
+<tr>
+<th scope="col">Current difficulty</th>
+<th scope="col">Proposed improvement</th>
+<th scope="col">Benefit to homeowners</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Updates scattered across chats</th>
+<td>One approved notice with an issuer, date and version</td>
+<td>Find the current information without searching many threads</td>
+</tr>
+<tr>
+<th scope="row">Requests followed up by message</th>
+<td>Reference number, assigned committee and status history</td>
+<td>See who is handling a request and its next step</td>
+</tr>
+<tr>
+<th scope="row">Separate files and repeated encoding</th>
+<td>Validated records and controlled updates</td>
+<td>Fewer conflicting versions and repeated submissions</td>
+</tr>
+<tr>
+<th scope="row">Limited visibility for absent owners</th>
+<td>Mobile access to authorised records and updates</td>
+<td>Stay involved across locations and time zones</td>
+</tr>
+<tr>
+<th scope="row">Business offers quickly disappear in feeds</th>
+<td>Searchable community listings</td>
+<td>Find and support participating neighbours</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-        <div class="pv-points reveal">
-          <div class="pv-point"><span class="pv-point__num">01</span><h3>What we collect</h3><p>Basic identity and contact details, your address in the estate, and records of dues, requests and gate access.</p></div>
-          <div class="pv-point"><span class="pv-point__num">02</span><h3>Why</h3><p>To manage membership and accounts, process payments, keep the estate secure, and respond to your concerns.</p></div>
-          <div class="pv-point"><span class="pv-point__num">03</span><h3>Your rights</h3><p>You may access, correct or ask us to erase your data, object to its processing, and file a complaint with the National Privacy Commission.</p></div>
-        </div>
 
-        <div class="pv-access reveal">
-          <div class="pv-access__head">
-            <span class="pv-badge">Resident portal</span>
-            <h3>How access is limited</h3>
-            <p><strong>Voluntary participation. Private by default.</strong> Show a clear notice, verify only necessary details, let the homeowner choose listing fields, and let the Livelihood Committee review publication. Address and verification records stay private; external chat links follow the selected app's policies.</p>
-          </div>
-          <div class="pv-roles">
-              <article class="pv-role">
-                <h4>Homeowner</h4>
-                <dl>
-                  <div><dt>Private records</dt><dd>Own account/requests</dd></div>
-                  <div><dt>Listings</dt><dd>Approved offers; own draft</dd></div>
-                  <div><dt>Admin/export</dt><dd class="is-none">None</dd></div>
-                </dl>
-              </article>
-              <article class="pv-role">
-                <h4>Livelihood Committee</h4>
-                <dl>
-                  <div><dt>Private records</dt><dd>Minimum assigned verification</dd></div>
-                  <div><dt>Listings</dt><dd>Review and publish with reason</dd></div>
-                  <div><dt>Admin/export</dt><dd>No unrelated bulk export</dd></div>
-                </dl>
-              </article>
-              <article class="pv-role">
-                <h4>IT volunteer</h4>
-                <dl>
-                  <div><dt>Private records</dt><dd>Approved, logged support only</dd></div>
-                  <div><dt>Listings</dt><dd>Synthetic tests by default</dd></div>
-                  <div><dt>Admin/export</dt><dd>Limited technical duty; reviewed changes</dd></div>
-                </dl>
-              </article>
-              <article class="pv-role">
-                <h4>Sponsor/public visitor</h4>
-                <dl>
-                  <div><dt>Private records</dt><dd>No resident records</dd></div>
-                  <div><dt>Listings</dt><dd>Public explanation only</dd></div>
-                  <div><dt>Admin/export</dt><dd class="is-none">None</dd></div>
-                </dl>
-              </article>
-          </div>
-          <div class="pv-safe">
-            <h4>Safeguards</h4>
-            <ul class="pv-chips">
-              <li>Named accounts</li><li>Privileged MFA</li><li>Tested database/file permissions</li><li>Minimal logs</li><li>Encrypted backups</li><li>Recovery drills</li><li>Correction, unpublish and privacy-request paths</li>
-            </ul>
-            <p>A majority vote, QR form, cloud subscription or NPC registration does not by itself authorise every data use or certify compliance.</p>
-            <p class="plan-fine">Legal reference: RA 10173; NPC consent, security, registration and privacy-engineering guidance. Privacy controls are release requirements to verify, not claims that all tests have already passed.</p>
-          </div>
-        </div>
 
-        <a href="privacy.html" class="link-arrow pv-more reveal">Read the full privacy policy</a>
-      </div>
-    </section>
 
+<h3 data-source-block="31">Why a community may be slow to adopt a portal</h3>
+<p data-source-block="32">Possible barriers include limited funds, volunteer time, poor connectivity, unfamiliarity with technology, migration effort, privacy concerns and uncertainty over long-term support. These are problems to resolve through a phased pilot, training, clear costs and an assisted service route.</p>
+<p data-source-block="33">Poorly documented decisions, selective release of records, unexplained refusals and control concentrated in one person can weaken accountability. These are governance risks to examine against actual records and applicable rules. Resistance to a portal alone is not evidence of a hidden agenda, and we should not attribute improper motives to other HOAs without evidence.</p>
+</div>
+</details>
+<details class="exec-detail" id="summary-transparency">
+<summary data-source-block="26">Transparency that homeowners can check</summary>
+<div class="exec-copy">
+<p data-source-block="27">Transparency improves when information has an accountable owner, an approved source and a visible history. A website by itself cannot ensure good governance. The portal must support the following practices.</p>
+<div class="exec-table" role="region" tabindex="0" aria-labelledby="exec-table-28" data-source-block="28">
+<table>
+<caption id="exec-table-28">Proposed transparency practices</caption>
+<thead>
+<tr>
+<th scope="col">Transparency feature</th>
+<th scope="col">What homeowners should be able to check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Approved notices and records</th>
+<td>Issuer, approval date, period covered and the current version of a notice or authorised record.</td>
+</tr>
+<tr>
+<th scope="row">Request tracking</th>
+<td>Their own reference number, acknowledgement, assigned team, status, reasons for closure and route to question the outcome.</td>
+</tr>
+<tr>
+<th scope="row">Project and financial summaries</th>
+<td>Approved scope, milestones, funding or sponsorship summaries, spending summaries and dates of the latest review.</td>
+</tr>
+<tr>
+<th scope="row">Corrections and decision history</th>
+<td>Visible corrections to published records, with earlier versions preserved for authorised review.</td>
+</tr>
+<tr>
+<th scope="row">Fair community participation</th>
+<td>Published listing and booth rules, reasons for decisions, conflict disclosures and a way to appeal.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p data-source-block="30">Community transparency must protect household privacy. Publish approved, appropriately redacted information to the right audience. A neighbour’s balance, complaint, contact details or visitor history should not become a community feed item. Provide a proper records-request route where a member may lawfully be entitled to additional records.</p>
+<h3 data-source-block="34">A community asset that can outlast a Board term</h3>
+<p data-source-block="35">Continuity requires written HOA rights to operate and maintain the portal, documented handover, two independent recovery custodians and a secure way to export records or change providers. Proposed pro bono support from Multiply Talents must have disclosed interests, independent approval and written terms. Ralph should recuse from decisions approving his company’s access, engagement or acceptance. Resident data must not be reused for marketing or political campaigning.</p>
+</div>
+</details>
+<details class="exec-detail" id="summary-access">
+<summary data-source-block="52">Sample Module access by role</summary>
+<div class="exec-copy">
+<p data-source-block="53">Use this as a permission design for approval and testing. Screenshots demonstrate interface views, not verified production authorisation. Access is denied unless the person, purpose, residence and module assignment are approved.</p>
+<div class="exec-role-filter" hidden><label for="exec-role">Explore proposed access</label><select id="exec-role" aria-describedby="exec-role-help"><option value="1">Homeowner</option><option value="2">Renter</option><option value="3">Shuttle driver</option><option value="4">Guard</option><option value="5">Admin (by committee)</option><option value="6">Superadmin</option><option value="7">Board of Directors</option><option value="all" selected>All roles</option></select>
+</div>
+<p id="exec-role-help">This displays the proposal. It does not change any account permissions.</p>
+<p class="exec-role-status" role="status" aria-live="polite" aria-atomic="true">
+</p>
+
+<details class="exec-detail">
+<summary>Permission key</summary>
+<div class="exec-copy">
+<dl class="exec-legend" data-source-block="54">
+<div>
+<dt>V</dt>
+<dd>View approved content.</dd>
+</div>
+<div>
+<dt>O</dt>
+<dd>Own records and permitted submissions or edits.</dd>
+</div>
+<div>
+<dt>V own</dt>
+<dd>Read own records only.</dd>
+</div>
+<div>
+<dt>D</dt>
+<dd>Assigned duty access and updates.</dd>
+</div>
+<div>
+<dt>M</dt>
+<dd>Assigned module management.</dd>
+</div>
+<div>
+<dt>R</dt>
+<dd>Approved summaries or authorised review.</dd>
+</div>
+<div>
+<dt>T</dt>
+<dd>Technical administration.</dd>
+</div>
+<div>
+<dt>&mdash;</dt>
+<dd>No access in that role.</dd>
+</div>
+</dl>
+</div>
+</details>
+<div class="exec-table exec-table--roles" role="region" tabindex="0" aria-labelledby="exec-table-55" data-source-block="55">
+<table>
+<caption id="exec-table-55">Community modules &mdash; proposed access</caption>
+<thead>
+<tr>
+<th scope="col">Module</th>
+<th scope="col" data-role-column="1">Homeowner</th>
+<th scope="col" data-role-column="2">Renter</th>
+<th scope="col" data-role-column="3">Shuttledriver</th>
+<th scope="col" data-role-column="4">Guard</th>
+<th scope="col" data-role-column="5">Admin(by Committee)</th>
+<th scope="col" data-role-column="6">Superadmin</th>
+<th scope="col" data-role-column="7">BOD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Emergency hotlines</th>
+<td data-role-column="1" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="2" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="3" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="4" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="7" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Announcements and feed</th>
+<td data-role-column="1" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="2" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="3" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="4" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Events and facility bookings</th>
+<td data-role-column="1" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">My profile and settings</th>
+<td data-role-column="1" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="3" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="4" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="7" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+</tr>
+<tr>
+<th scope="row">My requests and repairs</th>
+<td data-role-column="1" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Complaints and concerns</th>
+<td data-role-column="1" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">My statements and receipts</th>
+<td data-role-column="1" data-permission="V own"><span class="exec-code">V own</span><span class="exec-permission-description">Read own records only</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Business Directory</th>
+<td data-role-column="1" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Marketplace Buy and Sell</th>
+<td data-role-column="1" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Garage Sales</th>
+<td data-role-column="1" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Booth Events</th>
+<td data-role-column="1" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Job Openings and Referrals</th>
+<td data-role-column="1" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">My support and privacy requests</th>
+<td data-role-column="1" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="3" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="4" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="7" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-source-block="57">Limits that apply to this table</h3>
+<p data-source-block="58">Own covers personal and specifically authorised household records. Renter access expires with verified tenancy or authority; no shared homeowner passwords. Registration alone does not establish member-only entitlements.</p>
+<p data-source-block="59">Admin is a function, not an employee position. Livelihood M belongs to designated Livelihood Committee reviewers. Finance M needs a separate assignment. IT volunteers do not inherit either power.</p>
+<p data-source-block="60">R means summary oversight by default; private case escalation needs separate recorded authorisation. Initial Livelihood publishing is for verified, willing homeowners. Renter inclusion needs an approved audience policy and matching privacy choices. Dues access needs a later release review; collection remains disabled.</p>
+<h3 data-source-block="62">Operations governance and technical access</h3>
+<p data-source-block="63">Same role definitions and codes as the preceding table. Modules below remain subject to their own approval and readiness review. A demo menu is not permission to activate a live service.</p>
+<div class="exec-table exec-table--roles" role="region" tabindex="0" aria-labelledby="exec-table-64" data-source-block="64">
+<table>
+<caption id="exec-table-64">Operations and technical modules &mdash; proposed access</caption>
+<thead>
+<tr>
+<th scope="col">Module</th>
+<th scope="col" data-role-column="1">Homeowner</th>
+<th scope="col" data-role-column="2">Renter</th>
+<th scope="col" data-role-column="3">Shuttledriver</th>
+<th scope="col" data-role-column="4">Guard</th>
+<th scope="col" data-role-column="5">Admin</th>
+<th scope="col" data-role-column="6">Superadmin</th>
+<th scope="col" data-role-column="7">BOD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Visitor passes and vehicles</th>
+<td data-role-column="1" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="D"><span class="exec-code">D</span><span class="exec-permission-description">Assigned duty access and updates</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Gate visitor and vehicle lookup</th>
+<td data-role-column="1" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="D"><span class="exec-code">D</span><span class="exec-permission-description">Assigned duty access and updates</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Incidents and duty roster</th>
+<td data-role-column="1" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="D"><span class="exec-code">D</span><span class="exec-permission-description">Assigned duty access and updates</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Shuttle rides stations and trips</th>
+<td data-role-column="1" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="V O"><span class="exec-code">V O</span><span class="exec-permission-description">View approved content; Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="3" data-permission="D"><span class="exec-code">D</span><span class="exec-permission-description">Assigned duty access and updates</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Resident and property register</th>
+<td data-role-column="1" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="2" data-permission="O"><span class="exec-code">O</span><span class="exec-permission-description">Own records and permitted submissions or edits</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Approved member records</th>
+<td data-role-column="1" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Restricted Board records</th>
+<td data-role-column="1" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Finance and project reports</th>
+<td data-role-column="1" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Election notices only</th>
+<td data-role-column="1" data-permission="V"><span class="exec-code">V</span><span class="exec-permission-description">View approved content</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">User access management</th>
+<td data-role-column="1" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="M"><span class="exec-code">M</span><span class="exec-permission-description">Assigned module management</span>
+</td>
+<td data-role-column="6" data-permission="T"><span class="exec-code">T</span><span class="exec-permission-description">Technical administration</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+<tr>
+<th scope="row">Hosting backups and audit</th>
+<td data-role-column="1" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="2" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="3" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="4" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="5" data-permission="—"><span class="exec-code">—</span><span class="exec-permission-description">No access in that role</span>
+</td>
+<td data-role-column="6" data-permission="T"><span class="exec-code">T</span><span class="exec-permission-description">Technical administration</span>
+</td>
+<td data-role-column="7" data-permission="R"><span class="exec-code">R</span><span class="exec-permission-description">Approved summaries or authorised review</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-source-block="66">How these permissions must work</h3>
+<p data-source-block="67">Operational scope. Guards access minimum details for the assigned gate or shift. Drivers access authorised rides and minimum dispatch details, without general household lookup. Private alerts go only to the relevant resident and assigned personnel. [<a href="#reference-7" aria-label="Reference 7">7</a>]</p>
+<p data-source-block="68">Governance scope. Homeowner material is approved, redacted and subject to entitlement. BOD reviews use summaries; restricted cases require assignments and recusal. R on technical tools means assurance reports, not keys or console access.</p>
+<p data-source-block="69">Technical scope. Super admin is proposed, not shown in the screenshots. T covers configuration and diagnostic metadata, without routine business-record views. Infrastructure credentials can bypass application restrictions; production support access therefore needs justification, expiry, independent approval and audit. [<a href="#reference-8" aria-label="Reference 8">8</a>]</p>
+<p data-source-block="70">Action controls. O excludes self-approval and self-verification of ownership or tenancy. Statements are read only; request corrections through a ticket. M covers assigned processing and drafts; publication needs another authorised reviewer. Deny bulk export, silent log editing and permanent deletion by default. Nobody grants their own privileged role.</p>
+<p data-source-block="71">Separate capacities. A director’s personal homeowner permissions remain distinct from BOD duties. Keep binding voting, proxies, collection, penalties and CCTV release disabled pending separate authority and review.</p>
+</div>
+</details>
+<details class="exec-detail" id="summary-privacy-requirements">
+<summary>Full privacy requirements from the proposal</summary>
+<div class="exec-copy">
+<h3 data-source-block="37">Privacy and security explained clearly</h3>
+<p data-source-block="38">Your trust should rest on evidence. Our launch requirements include tested access controls, privacy processes and recovery. No online system is completely secure. Homeowners should be able to see what was tested, when it was reviewed and how to report a concern.</p>
+<h3 data-source-block="39">What protects your information</h3>
+<p data-source-block="40">Verified accounts and limited access. The proposed design limits records by role and authorised residence, including database access, files, searches, downloads and notifications. A hidden menu alone is not protection.</p>
+<p data-source-block="41">Stronger protection for powerful accounts. Our requirements include multifactor authentication, named privileged accounts, prompt revocation, logged changes and independent approval for sensitive actions. Board membership or technical responsibility should not give routine access to every private record.</p>
+<p data-source-block="42">Protected storage and recovery. Launch requirements include encrypted connections, verified encryption at rest, private files, protected backups and tested restoration. The demo must use separate synthetic data. User training, updates and incident exercises support these controls. [<a href="#reference-2" aria-label="Reference 2">2</a>, <a href="#reference-4" aria-label="Reference 4">4</a>, <a href="#reference-5" aria-label="Reference 5">5</a>]</p>
+<h3 data-source-block="43">What homeowners should know about their data</h3>
+<p data-source-block="44">Collect only what is needed. Identity and residence details support eligibility; contact details support service updates; business details support optional listings. Home addresses and private contacts stay hidden by default in the proposed design. The privacy notice must explain purposes, lawful bases, recipients and retention. [<a href="#reference-1" aria-label="Reference 1">1</a>]</p>
+<p data-source-block="45">Publication is a separate choice. Participation is voluntary, with separate, unticked choices for optional listing fields and contact links. Portal registration or information given through an earlier QR code, form or chat is not blanket permission for publication or a new use. [<a href="#reference-1" aria-label="Reference 1">1</a>, <a href="#reference-4" aria-label="Reference 4">4</a>]</p>
+<p data-source-block="46">You retain privacy rights. The portal needs a working route for access, correction, applicable removal or blocking, and withdrawal of optional publication consent. The privacy notice explains retention, providers, overseas processing and the HOA’s privacy contact. [<a href="#reference-1" aria-label="Reference 1">1</a>]</p>
+<p data-source-block="47">BEHOA remains accountable for processing it determines. Activation requires an impact assessment, applicable NPC registration review and provider agreements. A provider badge or NPC registration certificate does not prove full portal compliance. [<a href="#reference-1" aria-label="Reference 1">1</a>, <a href="#reference-2" aria-label="Reference 2">2</a>, <a href="#reference-3" aria-label="Reference 3">3</a>, <a href="#reference-6" aria-label="Reference 6">6</a>]</p>
+<p><a class="link-arrow" href="#privacy">Go to the Privacy section</a>
+</p>
+</div>
+</details>
+<details class="exec-detail" id="summary-implementation">
+<summary data-source-block="73">Developer implementation and release requirements</summary>
+<div class="exec-copy">
+<p data-source-block="74">Suggested route: /why-the-portal. Lead with the summary and benefits; expand transparency and privacy details below. Link to the Privacy Notice, costs and ownership, demo registration and support. Add module statuses and a role selector for the information table; this must never change signed-in permissions.</p>
+<h3 data-source-block="75">Changes indicated by the supplied screenshots</h3>
+<p data-source-block="76">Limit the live alert stream. A named visitor-pass denial is visible across several role screenshots. Confirm demo data are synthetic. Production notifications must be scoped to the requesting resident and assigned security or operations personnel. Do not broadcast it in a general feed.</p>
+<p data-source-block="77">Separate demo and production. The view-as banners say changes are saved. Disable demo impersonation against production; use isolated synthetic accounts. If support impersonation is later needed, require a recorded reason, additional approval, clear indication and an audit trail. Replace “Admin / Staff” with “Portal administrator” and retain separate committee assignments.</p>
+<p data-source-block="78">Show accurate status. Label modules In demo, Pilot, Planned or Live against approved releases. Remove sample financial amounts and election dates from public claims. Introduce super admin separately and enforce the matrix on the backend.</p>
+<h3 data-source-block="79">Evidence required before claiming a control is active</h3>
+<div class="exec-table" role="region" tabindex="0" aria-labelledby="exec-table-80" data-source-block="80">
+<table>
+<caption id="exec-table-80">Evidence required before claiming a control is active</caption>
+<thead>
+<tr>
+<th scope="col">Control to demonstrate</th>
+<th scope="col">Minimum acceptance evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Account and household isolation</th>
+<td>Positive and denied-access tests for every role; try another household’s ID, file URL, search result, realtime event and export.</td>
+</tr>
+<tr>
+<th scope="row">Privileged access and secrets</th>
+<td>MFA and revocation test; secrets absent from browser code; time-limited support and dual recovery custody.</td>
+</tr>
+<tr>
+<th scope="row">Privacy and fair processing</th>
+<td>Approved data inventory, lawful bases, privacy impact assessment, consent records, retention rules, rights workflow and vendor agreements.</td>
+</tr>
+<tr>
+<th scope="row">Publication and traceability</th>
+<td>Independent approval, redaction and version tests; tamper-evident logs of changes and exports; reviewer access separated.</td>
+</tr>
+<tr>
+<th scope="row">Protection and recovery</th>
+<td>Encryption configuration evidence; vulnerability review with critical issues resolved; restore both database records and uploaded files.</td>
+</tr>
+<tr>
+<th scope="row">Readiness and accountability</th>
+<td>Incident drill, NPC registration assessment, named owners, funding and handover record; mobile and assisted-service checks.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p data-source-block="82">Publish an assurance summary with control status, test date, scope, reviewer and next review date. Keep detailed vulnerabilities and secrets restricted. Mark controls Pending verification until the evidence exists; do not display an NPC seal, certification or “fully compliant” claim without the applicable verified basis. Cloud platforms do not certify the application. [<a href="#reference-2" aria-label="Reference 2">2</a>, <a href="#reference-4" aria-label="Reference 4">4</a>, <a href="#reference-6" aria-label="Reference 6">6</a>, <a href="#reference-8" aria-label="Reference 8">8</a>, <a href="#reference-9" aria-label="Reference 9">9</a>]</p>
+<p data-source-block="83">Release gate. The authorised HOA decision maker, module owner, privacy lead and IT reviewer must record readiness before activation. Confirm governing instruments and legal entitlements separately. Track pilot adoption, notice freshness, request ageing, listing turnaround and homeowner feedback without publishing identifiable behaviour.</p>
+</div>
+</details>
+<details class="exec-detail" id="summary-references">
+<summary data-source-block="85">Official references and developer sources</summary>
+<div class="exec-copy">
+<p data-source-block="86">Reference review 21 October 2026. Numbers below correspond to the narrative. These sources describe obligations and platform capabilities; they are not an audit or certification of the Bellefort portal.</p>
+<article class="exec-reference" id="reference-1">
+<h3 data-source-block="87">1  Republic Act 10173 Data Privacy Act of 2012</h3>
+<p data-source-block="88">Sections 11 to 14, 16, 18 and 20 to 21 cover data minimisation, lawful processing, processors, rights, security and accountability.</p>
+<p data-source-block="89"><a href="https://privacy.gov.ph/data-privacy-act/" target="_blank" rel="noopener noreferrer">Official law on the NPC website</a>
+</p>
+</article>
+<article class="exec-reference" id="reference-2">
+<h3 data-source-block="90">2  NPC Circular 2023 06 Security of Personal Data</h3>
+<p data-source-block="91">Sections 4 to 10, 13 to 16, 21 and 29 to 33 address accountability, assessment, access, retention, continuity and monitoring. Official NPC notice states effectivity on 30 March 2024.</p>
+<p data-source-block="92"><a href="https://privacy.gov.ph/wp-content/uploads/2024/03/NPC-Circular-Repeal-16-01-Signed.pdf" target="_blank" rel="noopener noreferrer">Signed circular</a>  |  <a href="https://privacy.gov.ph/npc-issues-circulars-to-strengthen-personal-data-protection-in-ph/" target="_blank" rel="noopener noreferrer">NPC effectivity notice</a>
+</p>
+</article>
+<article class="exec-reference" id="reference-3">
+<h3 data-source-block="93">3  NPC Circular 2022 04 Registration</h3>
+<p data-source-block="94">Sections 5 to 7 and 32 to 33. Assess actual processing and risk, not household count alone. Document mandatory or voluntary registration, or the applicable declaration route. Display only a valid, applicable registration seal.</p>
+<p data-source-block="95"><a href="https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04-2.pdf" target="_blank" rel="noopener noreferrer">Signed registration circular</a>
+</p>
+</article>
+<article class="exec-reference" id="reference-4">
+<h3 data-source-block="96">4  NPC Advisory 2025 02 Privacy Engineering</h3>
+<p data-source-block="97">Section 4 A to E applies privacy throughout planning, development, testing, deployment and maintenance; see printed pages 3 to 6. Includes testing and private defaults.</p>
+<p data-source-block="98"><a href="https://privacy.gov.ph/wp-content/uploads/2025/12/NPC_Advisory2025-02.pdf" target="_blank" rel="noopener noreferrer">Official privacy engineering advisory</a>
+</p>
+</article>
+<article class="exec-reference" id="reference-5">
+<h3 data-source-block="99">5  NPC Circular 16 03 Personal Data Breach Management</h3>
+<p data-source-block="100">Sections 8 to 11 and 15 to 18 govern response and notification. The privacy lead must assess notification conditions and current reporting requirements, including the applicable 72 hour rule.</p>
+<p data-source-block="101"><a href="https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf" target="_blank" rel="noopener noreferrer">Signed breach management circular</a>  |  <a href="https://privacy.gov.ph/pips-and-pics/advisories-circulars/" target="_blank" rel="noopener noreferrer">Current NPC issuances including 2026 guidance</a>
+</p>
+</article>
+<article class="exec-reference" id="reference-6">
+<h3 data-source-block="102">6  NPC Registration and compliance are different</h3>
+<p data-source-block="103">Circular 2022 04 section 4 A treats registration as one means of demonstrating compliance. Do not equate it with a security audit or complete DPA compliance.</p>
+<p data-source-block="104"><a href="https://privacy.gov.ph/wp-content/uploads/2023/05/Circular-2022-04-2.pdf" target="_blank" rel="noopener noreferrer">Registration circular section 4</a>
+</p>
+</article>
+<article class="exec-reference" id="reference-7">
+<h3 data-source-block="105">7  NPC Circular 2022 03 Private Security Agencies</h3>
+<p data-source-block="106">Sections 1 and 4 to 5 apply to covered security processing. Section 5 B restricts recording sensitive identification data and retaining government ID cards for identity checks.</p>
+<p data-source-block="107"><a href="https://privacy.gov.ph/wp-content/uploads/2023/05/NPC-Circular-No.-2022-%E2%80%93-03-Private-Security-Agencies.pdf" target="_blank" rel="noopener noreferrer">Official security agency circular</a>
+</p>
+</article>
+<article class="exec-reference" id="reference-8">
+<h3 data-source-block="108">8  Supabase access controls and backups</h3>
+<p data-source-block="109">Enable and test row level access policies. Service and secret keys bypass these policies and must stay on the backend. Database backups do not include Storage API file objects; back those up separately.</p>
+<p data-source-block="110"><a href="https://supabase.com/docs/guides/database/secure-data" target="_blank" rel="noopener noreferrer">Securing data</a>  |  <a href="https://supabase.com/docs/guides/platform/backups" target="_blank" rel="noopener noreferrer">Backup scope and restoration</a>
+</p>
+</article>
+<article class="exec-reference" id="reference-9">
+<h3 data-source-block="111">9  Vercel shared responsibility</h3>
+<p data-source-block="112">Application data, access configuration and customer responsibilities remain with the application operator. Confirm the actual stack and provider contracts before production.</p>
+<p data-source-block="113"><a href="https://vercel.com/docs/security/shared-responsibility" target="_blank" rel="noopener noreferrer">Official shared responsibility documentation</a>
+</p>
+</article>
+<p data-source-block="114">Governance validation. This matrix proposes safe defaults, not a ruling on membership, tenancy, inspection or voting rights. Validate those rights against authenticated Bellefort instruments and current DHSUD rules before implementation. Access to the signed HOA statute and current IRR could not be verified in this review; no detailed entitlement or voting rule is asserted here.</p>
+<p data-source-block="115"><a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/16070" target="_blank" rel="noopener noreferrer">RA 9904 official statute reference</a>  |  <a href="https://www.foi.gov.ph/agencies/dhsud/2024-revised-irr-for-ra-9904/" target="_blank" rel="noopener noreferrer">DHSUD official IRR request and source link</a>
+</p>
+<details class="exec-detail">
+<summary>Source document</summary>
+<div class="exec-copy">
+<p data-source-block="1">Webpage narrative and developer handoff</p>
+<p data-source-block="2">Prepared for Ralph Valdez and the Bellefort Development Team  |  October 2026</p>
+<p data-source-block="3">For HOA review before publication. Pages 1 to 4 contain proposed homeowner copy. Pages 5 to 8 define permissions, implementation controls and references.</p>
+</div>
+</details>
+</div>
+</details>
+<details class="exec-detail" id="summary-participate">
+<summary data-source-block="48">Take part in shaping the portal</summary>
+<div class="exec-copy">
+<p data-source-block="49">Join a demonstration, share feedback and express interest in the Livelihood program. Read the privacy notice before submitting information. Homeowners who need help should have an assisted or offline route for applicable HOA services.</p>
+<p data-source-block="50">Transparent HOA - Information you can access.Responsive Services - Concerns that get resolved.Safer Community - A secure and well-maintained Bellefort Estates.Stronger Together - A community that grows in value.</p>
+</div>
+</details>
+
+</div>
+</div>
+</section>
+<!-- End Executive Summary -->
     <!-- ============ PORTAL PLAN ============
          Content from "Bellefort HOA Portal: the value contributed, the cost
          to sustain it" (revised 20 October 2026, for HOA review). Its data
@@ -654,6 +1424,77 @@
         <p class="plan-disclaimer">For review and adoption. No new homeowner charge, binding ownership transfer or NPC certification is created by this estimate.</p>
       </div>
     </section>
+    <!-- ============ PRIVACY ============ -->
+    <section class="section section--tint" id="privacy">
+      <div class="wrap">
+        <div class="grid">
+          <p class="label reveal">Data Privacy</p>
+          <div class="grid__main">
+            <h2 class="h2 reveal">Your privacy matters.</h2>
+            <p class="body reveal">Bellefort Estates Homeowners Association respects your privacy and recognizes the need for appropriate measures to protect and manage the personal data entrusted to us, in line with the Data Privacy Act of 2012 (Republic Act No. 10173).</p>
+          </div>
+        </div>
+
+        <div class="pv-points reveal">
+          <div class="pv-point"><span class="pv-point__num">01</span><h3>What we collect</h3><p>Basic identity and contact details, your address in the estate, and records of dues, requests and gate access.</p></div>
+          <div class="pv-point"><span class="pv-point__num">02</span><h3>Why</h3><p>To manage membership and accounts, process payments, keep the estate secure, and respond to your concerns.</p></div>
+          <div class="pv-point"><span class="pv-point__num">03</span><h3>Your rights</h3><p>You may access, correct or ask us to erase your data, object to its processing, and file a complaint with the National Privacy Commission.</p></div>
+        </div>
+
+        <div class="pv-access reveal">
+          <div class="pv-access__head">
+            <span class="pv-badge">Resident portal</span>
+            <h3>How access is limited</h3>
+            <p><strong>Voluntary participation. Private by default.</strong> Show a clear notice, verify only necessary details, let the homeowner choose listing fields, and let the Livelihood Committee review publication. Address and verification records stay private; external chat links follow the selected app's policies.</p>
+          </div>
+          <div class="pv-roles">
+              <article class="pv-role">
+                <h4>Homeowner</h4>
+                <dl>
+                  <div><dt>Private records</dt><dd>Own account/requests</dd></div>
+                  <div><dt>Listings</dt><dd>Approved offers; own draft</dd></div>
+                  <div><dt>Admin/export</dt><dd class="is-none">None</dd></div>
+                </dl>
+              </article>
+              <article class="pv-role">
+                <h4>Livelihood Committee</h4>
+                <dl>
+                  <div><dt>Private records</dt><dd>Minimum assigned verification</dd></div>
+                  <div><dt>Listings</dt><dd>Review and publish with reason</dd></div>
+                  <div><dt>Admin/export</dt><dd>No unrelated bulk export</dd></div>
+                </dl>
+              </article>
+              <article class="pv-role">
+                <h4>IT volunteer</h4>
+                <dl>
+                  <div><dt>Private records</dt><dd>Approved, logged support only</dd></div>
+                  <div><dt>Listings</dt><dd>Synthetic tests by default</dd></div>
+                  <div><dt>Admin/export</dt><dd>Limited technical duty; reviewed changes</dd></div>
+                </dl>
+              </article>
+              <article class="pv-role">
+                <h4>Sponsor/public visitor</h4>
+                <dl>
+                  <div><dt>Private records</dt><dd>No resident records</dd></div>
+                  <div><dt>Listings</dt><dd>Public explanation only</dd></div>
+                  <div><dt>Admin/export</dt><dd class="is-none">None</dd></div>
+                </dl>
+              </article>
+          </div>
+          <div class="pv-safe">
+            <h4>Safeguards</h4>
+            <ul class="pv-chips">
+              <li>Named accounts</li><li>Privileged MFA</li><li>Tested database/file permissions</li><li>Minimal logs</li><li>Encrypted backups</li><li>Recovery drills</li><li>Correction, unpublish and privacy-request paths</li>
+            </ul>
+            <p>A majority vote, QR form, cloud subscription or NPC registration does not by itself authorise every data use or certify compliance.</p>
+            <p class="plan-fine">Legal reference: RA 10173; NPC consent, security, registration and privacy-engineering guidance. Privacy controls are release requirements to verify, not claims that all tests have already passed.</p>
+          </div>
+        </div>
+
+        <a href="privacy.html" class="link-arrow pv-more reveal">Read the full privacy policy</a>
+      </div>
+    </section>
+
   </main>
 
   <!-- ============ FOOTER ============ -->
@@ -706,6 +1547,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/executive-summary.js" defer></script>
   <script src="js/animations.js" defer></script>
 </body>
 </html>
